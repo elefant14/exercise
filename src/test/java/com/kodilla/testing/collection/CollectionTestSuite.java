@@ -2,8 +2,11 @@ package com.kodilla.testing.collection;
 
 import com.kodilla.testing.collection.OddNumbersExterminator;
 import org.junit.*;
+import java.util.ArrayList;
 
 public class CollectionTestSuite {
+    private int number;
+
     @Before
     public void before(){
         System.out.println("Test Case: begin");
@@ -45,7 +48,7 @@ public class CollectionTestSuite {
         //When
         ArrayList<Integer>normalList = new ArrayList<Integer>();
 
-        if (results%2==0) {
+        if (number%2==0) {
             System.out.println("Test OK");
         } else {
             System.out.println("Test failed");
