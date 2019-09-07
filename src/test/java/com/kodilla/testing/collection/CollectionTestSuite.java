@@ -1,11 +1,11 @@
 package com.kodilla.testing.collection;
 
-import com.kodilla.testing.collection.OddNumbersExterminator;
 import org.junit.*;
+
 import java.util.ArrayList;
 
 public class CollectionTestSuite {
-    private int number;
+
 
     @Before
     public void before(){
@@ -23,18 +23,13 @@ public class CollectionTestSuite {
     public static void afterClass() {
         System.out.println("Test Suite: end");
     }
-    @Test
-    public void testCaseArrayList(){
-        //Given
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
 
-    }
     @Test
     public void testOddNumbersExterminatorEmptyList(){
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         //When
-        ArrayList<Integer>emptyList = new ArrayList<Integer>();
+        ArrayList<Integer>emptyList = new ArrayList<>();
         ArrayList<Integer>result = oddNumbersExterminator.exterminate(emptyList);
 
         System.out.println("Testing emptyList ");
