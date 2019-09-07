@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class ShapeCollector {
+public class ShapeCollector<shapeCollection> {
     private List<Shape> shapeCollection = new List<>();
     List<Shape> getShapeCollection;
     return shapeCollection;
