@@ -46,17 +46,24 @@ public class CollectionTestSuite {
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         //When
-        ArrayList<Integer>normalList = new ArrayList<Integer>();
+        ArrayList<Integer> normalList = new ArrayList<>();
+        normalList.add(1);
+        normalList.add(2);
+        normalList.add(3);
+        normalList.add(4);
 
-        if (number%2==0) {
-            System.out.println("Test OK");
-        } else {
-            System.out.println("Test failed");
-        }
-        ArrayList<Integer>results = oddNumbersExterminator.exterminate(normalList);
+        ArrayList<Integer>evenList = new ArrayList<>();
+        evenList.add(2);
+        evenList.add(4);
 
-        System.out.println("Testing normalList ");
+        //When
+        ArrayList<Integer> result = oddNumbersExterminator.exterminate(normalList);
+        System.out.println("Testing Normal list");
+
         //Then
-        Assert.assertEquals(normalList, results);
+
+        Assert.assertEquals(evenList, result);
     }
+
+
 }
