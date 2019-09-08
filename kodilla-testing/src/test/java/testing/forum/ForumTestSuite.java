@@ -1,4 +1,4 @@
-package com.kodilla.testing.shape;
+package testing.forum;
 
 public interface Shape {
 

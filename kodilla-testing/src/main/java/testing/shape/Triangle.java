@@ -1,16 +1,11 @@
-package com.kodilla.testing.shape;
-
-
-
-
-
+package testing.shape;
 
 
 import java.util.Objects;
 
 
 public class Triangle implements Shape {
-    private String name = "Triangle";
+    private String name;
     private double lenghtA;
     private double lenghtH;
 
@@ -41,6 +36,6 @@ public class Triangle implements Shape {
     }
 
     public double getField() {
-        return lenghtA * lenghtH/2;
+        return  lenghtA * lenghtH/2;
     }
 }
