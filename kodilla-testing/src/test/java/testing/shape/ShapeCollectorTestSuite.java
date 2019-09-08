@@ -11,7 +11,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Shape() {
+        Shape shape = new Circle(3) {
             @Override
             public String getShapeName() {
                 return null;
@@ -33,7 +33,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Shape() {
+        Shape shape = new Circle(3) {
             @Override
             public String getShapeName() {
                 return null;
@@ -57,7 +57,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Square(4);
+        Shape shape = new Circle(3);
         shapeCollector.addFigure(shape);
         //When
         Shape shapeResult = shapeCollector.getFigure(0);
@@ -70,7 +70,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Shape() {
+        Shape shape = new Circle(3) {
             @Override
             public String getShapeName() {
                 return null;
