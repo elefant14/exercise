@@ -19,5 +19,5 @@ dependencies {
     //Test dependencies
     testCompile('junit:junit:4.12')
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation('org.mockito:mockito-all:1.10.19')
+    testCompile('org.mockito:mockito-all:1.10.19')
 }
