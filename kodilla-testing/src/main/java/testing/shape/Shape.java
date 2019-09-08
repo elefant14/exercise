@@ -1,6 +1,6 @@
 package testing.shape;
 
 public interface Shape {
-    String getShapeName;
-    double getField = 0,0;
+    String getShapeName();
+    double getField();
 }

@@ -1,8 +1,6 @@
 package testing.shape;
 
-
 import java.util.Objects;
-
 
 public class Triangle implements Shape {
     private String name;
@@ -39,3 +37,5 @@ public class Triangle implements Shape {
         return  lenghtA * lenghtH/2;
     }
 }
+
+

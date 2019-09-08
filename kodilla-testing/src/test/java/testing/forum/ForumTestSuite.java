@@ -1,6 +1,6 @@
 package testing.forum;
 
-public interface Shape {
+interface Shape {
 
     String getShapeName();
     double getField();

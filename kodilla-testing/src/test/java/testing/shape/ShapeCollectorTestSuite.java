@@ -1,21 +1,27 @@
 package testing.shape;
-
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
-
-
 public class ShapeCollectorTestSuite {
-
     @Test
     public void testAddFigure(){
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Shape();
+        Shape shape = new Shape() {
+            @Override
+            public String getShapeName() {
+                return null;
+            }
+
+            @Override
+            public double getField() {
+                return 0;
+            }
+        };
         //When
         shapeCollector.addFigure(shape);
         //Then
@@ -27,7 +33,17 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Shape();
+        Shape shape = new Shape() {
+            @Override
+            public String getShapeName() {
+                return null;
+            }
+
+            @Override
+            public double getField() {
+                return 0;
+            }
+        };
         shapeCollector.addFigure(shape);
         //When
         boolean result = shapeCollector.removeFigure(shape);
@@ -54,7 +70,17 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Shape();
+        Shape shape = new Shape() {
+            @Override
+            public String getShapeName() {
+                return null;
+            }
+
+            @Override
+            public double getField() {
+                return 0;
+            }
+        };
         shapeCollector.addFigure(shape);
         ArrayList<Shape> shapeList= new ArrayList<>();
         shapeList.add(shape);
@@ -64,3 +90,4 @@ public class ShapeCollectorTestSuite {
         assertEquals(shapeList.toString(), shapeResultList.toString());
     }
 }
+
