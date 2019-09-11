@@ -1,56 +1,41 @@
 package com.kodilla.testing.shape;
+
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class ShapeCollectorTestSuite {
     @Test
     public void testAddFigure(){
 
-        //Given
-        ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Circle(3) {
-            @Override
-            public String getShapeName() {
-                return null;
-            }
+        Shape circle =new Circle( 3);
+        ShapeCollector shapeCollector=new ShapeCollector();
 
-            @Override
-            public double getField() {
-                return 0;
-            }
-        };
         //When
-        shapeCollector.addFigure(shape);
+        shapeCollector.addFigure(circle);
+
         //Then
-        assertEquals(1, shapeCollector.getShapeCollection().size());
+        assertEquals(1,shapeCollector.getShapeCollection().size());
     }
 
     @Test
     public void testRemoveFigure(){
-
         //Given
+        Shape circle = new Circle(3);
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Circle(3) {
-            @Override
-            public String getShapeName() {
-                return null;
-            }
 
-            @Override
-            public double getField() {
-                return 0;
-            }
-        };
-        shapeCollector.addFigure(shape);
+        shapeCollector.addFigure(circle);
         //When
-        boolean result = shapeCollector.removeFigure(shape);
+        boolean result = shapeCollector.removeFigure(circle);
         //Then
         assertTrue(result);
         assertEquals(0, shapeCollector.getShapeCollection().size());
     }
+
 
     @Test
     public void testGetFigureNumber(){
@@ -67,23 +52,13 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testShowFigures(){
-
-        //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Circle(3) {
-            @Override
-            public String getShapeName() {
-                return null;
-            }
+        //Given
+        Circle circle= new Circle(3);
 
-            @Override
-            public double getField() {
-                return 0;
-            }
-        };
-        shapeCollector.addFigure(shape);
+        shapeCollector.addFigure(circle);
         ArrayList<Shape> shapeList= new ArrayList<>();
-        shapeList.add(shape);
+        shapeList.add(circle);
         //When
         List<Shape> shapeResultList = shapeCollector.getShapeCollection();
         //Then

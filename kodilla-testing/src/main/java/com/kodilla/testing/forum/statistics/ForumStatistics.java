@@ -58,7 +58,7 @@ public class ForumStatistics {
         if (postsNumber != 0) {
             commentsAveragePost = commentsNumber / postsNumber;
         } else {
-            postsNumber = 0;
+            commentsAveragePost = 0;
         }
     }
 }
