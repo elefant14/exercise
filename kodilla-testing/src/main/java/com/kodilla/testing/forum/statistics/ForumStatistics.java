@@ -1,12 +1,15 @@
 package com.kodilla.testing.forum.statistics;
 
 public class ForumStatistics {
+
     private int usersNumber;
     private int postsNumber;
     private int commentsNumber;
     private double postsAverage;
     private double commentsAverage;
     private double commentsAveragePost;
+
+
 
 
     public int getUsersNumber() {
@@ -21,7 +24,7 @@ public class ForumStatistics {
         return commentsNumber;
     }
 
-    public double getPostsAverager() {
+    public double getPostsAverage() {
         return postsAverage;
     }
 
@@ -52,7 +55,7 @@ public class ForumStatistics {
 
         }
 
-        if (commentsNumber != 0) {
+        if (postsNumber != 0) {
             commentsAveragePost = commentsNumber / postsNumber;
         } else {
             postsNumber = 0;
