@@ -84,7 +84,7 @@ public class TestStatistics{
         //Then
         assertEquals(100, forumStatistics.getPostsNumber(),0.1);
         assertEquals(50, forumStatistics.getCommentsNumber(), 0.1);
-        assertEquals(0.5, forumStatistics.getCommentsAveragePost(), 0.1);
+        assertEquals(2.0, forumStatistics.getCommentsAveragePost(), 0.1);
     }
 
     @Test
