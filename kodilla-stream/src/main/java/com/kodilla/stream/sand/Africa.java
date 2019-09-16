@@ -1,4 +1,11 @@
 package com.kodilla.stream.sand;
 
-public class Africa {
+import java.math.BigDecimal;
+
+public class Africa implements SandStorage {
+
+    @Override
+    public BigDecimal getSandBeansQuantity() {
+        return new BigDecimal("999999901234567890");
+    }
 }
