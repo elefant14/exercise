@@ -19,7 +19,7 @@ public class ArrayOperationsTestSuite {
     @Test
     public void testGetAverageWhen0() {
         //Given
-        int grades[] = {0};
+        int grades[] = new int[0];
         double averageGrades = 0.0;
         //When
         double average = ArrayOperations.getAverage(grades);

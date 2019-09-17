@@ -49,7 +49,7 @@ public class ForumStatistics {
         }
 
         if (commentsNumber != 0) {
-            commentsAverage = usersNumber / commentsAverage;
+            commentsAverage = usersNumber / commentsNumber;
         } else {
             commentsAverage = 0;
 
