@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 public class FileReader {
-    public void readFile() {
+    public void readFile() throws FileReaderException {
         Object getFile = null;
         if (getFile !=null) {
             System.out.println("Oh no! Sth went wrong");
@@ -24,7 +24,8 @@ public class FileReader {
             fileLines.forEach(System.out::println);
 
         } catch (IOException e) {
-            System.out.println("Óh no! Sth went wrong! Error:"+e);
+            throw new FileReaderException();
+
         } finally {
             System.out.println("I am gonna to be here...always");
         }
