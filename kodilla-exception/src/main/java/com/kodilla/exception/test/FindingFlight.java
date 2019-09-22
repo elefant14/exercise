@@ -3,7 +3,7 @@ package com.kodilla.exception.test;
 
 import java.util.HashMap;
 
-class FindFlight{
+class FindFlight {
 
 
     private HashMap<String, Boolean> findFlightsMap() {
@@ -13,29 +13,38 @@ class FindFlight{
         flightsMap.put("JFK", true);
         flightsMap.put("Yulara", false);
 
-        return (HashMap<String, Boolean>) flightsMap;
+        return flightsMap;
 
     }
 
-    boolean findFlight(Flight flight) throws RouteNotFoundException {
+    void findFlight(Flight flight) throws RouteNotFoundException {
 
         HashMap<String, Boolean> flightsMap = findFlightsMap();
         assert flightsMap != null;
-        if (!flightsMap.keySet().contains(flight.getDepartureAirport()) &&
-                !flightsMap.keySet().contains(flight.getArrivalAirport())) {
+        if (!flightsMap.containsKey(flight.getDepartureAirport()) &&
+                !flightsMap.containsKey(flight.getArrivalAirport())) {
+
+            throw new RouteNotFoundException("There is no flights");
+
         }
-        throw new RouteNotFoundException("There is no flights");
-
-
     }
-    private boolean findAirport(String airportName) throws RouteNotFoundException{
-        if (findFlightsMap().containsKey(airportName)) {
-        return true;
 
-        }else{
+
+    private String findAirport(String airportName) throws RouteNotFoundException {
+        if (findFlightsMap().containsKey(airportName) && findFlightsMap().containsValue(true)) {
+
+
+        } else {
             throw new RouteNotFoundException("Sorry, I can't find an airport");
         }
+return airportName;
+
     }
-
-
 }
+
+
+
+
+
+
+
