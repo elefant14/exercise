@@ -28,9 +28,9 @@ class FindFlight{
 
 
     }
-    private HashMap<String, Boolean> findAirport(String airportName) throws RouteNotFoundException{
+    private boolean findAirport(String airportName) throws RouteNotFoundException{
         if (findFlightsMap().containsKey(airportName)) {
-return findFlightsMap();
+        return true;
 
         }else{
             throw new RouteNotFoundException("Sorry, I can't find an airport");
