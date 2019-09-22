@@ -24,7 +24,17 @@ class FindFlight{
         if (!flightsMap.keySet().contains(flight.getDepartureAirport()) &&
                 !flightsMap.keySet().contains(flight.getArrivalAirport())) {
         }
-        throw new RouteNotFoundException();
+        throw new RouteNotFoundException("There is no flights");
+
+
+    }
+    private HashMap<String, Boolean> findAirport(String airportName) throws RouteNotFoundException{
+        if (findFlightsMap().containsKey(airportName)) {
+return findFlightsMap();
+
+        }else{
+            throw new RouteNotFoundException("Sorry, I can't find an airport");
+        }
     }
 
 
