@@ -9,14 +9,14 @@ public class FindFlightsTest {
         FindFlight findFlight = new FindFlight();
 
         try {
-              findFlight.findFlight(fromParisToNYC);
+              findFlight.findAirport("CDG");
             System.out.println("You have 3 connection flights : " + fromParisToNYC);
         } catch (RouteNotFoundException e) {
             System.out.println("I'm sorry, I can't find any flight. Please try another mode of transport");
         }
 
         try {
-             findFlight.findFlight(fromNYCToUluru);
+             findFlight.findAirport("Okécie");
             System.out.println("I'm sorry, there is no flight " + fromNYCToUluru);
         } catch (RouteNotFoundException e) {
             System.out.println("Yulara has not an airport");

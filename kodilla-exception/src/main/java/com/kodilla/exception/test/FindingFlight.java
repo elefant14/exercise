@@ -17,27 +17,15 @@ class FindFlight {
 
     }
 
-    void findFlight(Flight flight) throws RouteNotFoundException {
-
-        HashMap<String, Boolean> flightsMap = findFlightsMap();
-        assert flightsMap != null;
-        if (!flightsMap.containsKey(flight.getDepartureAirport()) &&
-                !flightsMap.containsKey(flight.getArrivalAirport())) {
-
-            throw new RouteNotFoundException("There is no flights");
-
-        }
-    }
 
 
-    private String findAirport(String airportName) throws RouteNotFoundException {
-        if (findFlightsMap().containsKey(airportName) && findFlightsMap().containsValue(true)) {
 
+    public boolean findAirport(String airportName) throws RouteNotFoundException {
+        if (findFlightsMap().containsKey(airportName) && findFlightsMap().get(airportName)) {
 
-        } else {
-            throw new RouteNotFoundException("Sorry, I can't find an airport");
-        }
-return airportName;
+return true;
+        } throw new RouteNotFoundException("There is no airport");
+
 
     }
 }
